@@ -5,11 +5,18 @@ class Website():
     def __init__(self, _soup):
         self.soup = _soup
 
-    def scrapePrice(self):
+    def work(self):
         return "implement method"
 
-    def scrapeImage(self):
+    def __scrapeBrand(self):
         return "implement method"
 
-    def scrapeDescription(self):
+    def __scrapeTitle(self):
         return "implement method"
+
+    def __scrapePrice(self):
+        return "implement method"
+
+    def __scrapeImage(self):
+        return "implement method"
+

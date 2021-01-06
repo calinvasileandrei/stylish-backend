@@ -40,11 +40,12 @@ class Scraper:
         data = {"price":"","title":"","description":"","image":""}
         try:
             site = cls(soup)
-            data["price"] = site.scrapePrice()
+            data = site.work()
+            return {"status": "Ok", "msg": "Operation Completed!", "data": data}
         except Exception as e:
             print("error: ",e)
+            return {"status":"error", "msg":"Error scraping data!", "data":data}
 
-        return {"status":"Ok", "msg":"Operation Completed!", "data":data}
 
     def __check_site(self):
         for site in self.supported_sites:
